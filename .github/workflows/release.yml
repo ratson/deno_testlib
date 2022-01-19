@@ -26,13 +26,13 @@ jobs:
 
       - run: cp .github/release.config.js release.config.js
 
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
-        with:
-          semantic_version: 19.0.2
-          branch: release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Semantic Release
+      #   uses: cycjimmy/semantic-release-action@v2
+      #   with:
+      #     semantic_version: 19.0.2
+      #     branch: release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Semantic Release 2
         uses: docker://ghcr.io/codfish/semantic-release-action:v1
