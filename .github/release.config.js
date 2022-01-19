@@ -1,7 +1,7 @@
 module.exports = {
   "branches": [
     { name: "main" },
-    { name: "x.x.x" },
+    { name: "refs/tags/*", range: "x.x.x" },
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
