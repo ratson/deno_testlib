@@ -33,3 +33,20 @@ jobs:
           branch: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Semantic Release 2
+        uses: codfish/semantic-release-action@v1
+        with:
+          branches: |
+            [
+              'release',
+            ]
+          tag_format: '${version}'
+          plugins: |
+            [
+              @semantic-release/commit-analyzer',
+              '@semantic-release/release-notes-generator',
+              '@semantic-release/github',
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
