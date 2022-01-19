@@ -30,6 +30,6 @@ jobs:
         with:
           semantic_version: 19.0.2
           branch: main
-          extends: ./.github/release.config.js
+          plugins: ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/github"]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
